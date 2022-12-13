@@ -9,6 +9,11 @@ the first few values in the sequence are:
 
 
 def fibonacci_list(count: int) -> list:
+    """
+    create Fibonacci sequence
+    :param count: index number of sequence
+    :return: the Fibonacci sequence as list since 0 for count
+    """
     first = 0
     second = 1
     result = [first, second]
@@ -20,15 +25,20 @@ def fibonacci_list(count: int) -> list:
 
 
 def fibonacci(count: int) -> int:
+    """
+    it starts from 0. For example "3" is number five
+    :param count:  index number of sequence
+    :return: one int number from Fibonacci sequence
+    """
     first = 0
     second = 1
     result = [first, second]
 
-    for _ in range(0, count - 2):
+    for _ in range(0, count - 3):
         num = result[-1] + result[-2]
         result.append(num)
         result = result[1:]
-    return result
+    return result[0] + result[1]
 
 
 def fibonacci_recursive(count: int) -> int:
@@ -44,6 +54,6 @@ def fibonacci_recursive(count: int) -> int:
     return fibonacci_recursive(count - 1) + fibonacci_recursive(count - 2)
 
 
-print(f"{fibonacci(15)}\n")
-print(f"{fibonacci_recursive(4)}\n")
-print(f"{fibonacci_list(15)}\n")
+print(f"{fibonacci(16)}\n")
+print(f"{fibonacci_recursive(15)}\n")
+print(f"{fibonacci_list(16)}\n")
