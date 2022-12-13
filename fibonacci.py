@@ -52,8 +52,3 @@ def fibonacci_recursive(count: int) -> int:
     if count == 1:
         return 1
     return fibonacci_recursive(count - 1) + fibonacci_recursive(count - 2)
-
-
-print(f"{fibonacci(16)}\n")
-print(f"{fibonacci_recursive(15)}\n")
-print(f"{fibonacci_list(16)}\n")
