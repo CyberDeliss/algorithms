@@ -11,8 +11,18 @@
 """
 
 
+def swap_pos(lst: list, a: int, b: int) -> list:
+    #using the swapping approach
+    lst[a], lst[b] = lst[b], lst[a]
+    return lst
+
+
 def bubble_sort(_list: list) -> list:
-    pass
+    for i in range(0, len(_list)):
+        for j in range(i, len(_list)):
+            if _list[i] > _list[j]:
+                _list = swap_pos(_list, i, j)
+    return _list
 
 
 def mix_sorting(_list: list) -> list:
@@ -41,3 +51,5 @@ def merge_sort(_list: list) -> list:
 
 def pyramid_sort(_list: list) -> list:
     pass
+
+
